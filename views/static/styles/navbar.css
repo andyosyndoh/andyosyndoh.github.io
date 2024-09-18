@@ -1,34 +1,57 @@
+/* General Styles for Navbar */
 .navbar {
-	background-color: #e6e6fa;
-	overflow: hidden;
-	padding: 0;
-	margin: 0;
-	box-shadow: 0 8px 6px rgba(0, 0, 0, 0.5);
-	height: 80px; /* Increase the height of the navbar */
+	background-color: aliceblue; /* Dark background for the navbar */
+	padding: 15px 20px; /* Add some padding for spacing */
 	display: flex;
-	/* align-items: center; Center items vertically */
-}
-
-.navbar ul {
-	list-style: none;
-	display: flex;
-	justify-content: flex-start; /* Align items to the left */
+	justify-content: space-between; /* Align items to the edges */
 	align-items: center; /* Vertically center the items */
-	padding: 0;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+	position: sticky;
+	top: 0;
+	z-index: 100; /* Ensures the navbar stays on top of content */
+  }
+  
+  /* Styling the Navbar List */
+  .navbar ul {
+	list-style-type: none; /* Remove bullet points */
 	margin: 0;
-}
-
-.navbar ul li {
-	padding: 0px 5%;
-}
-
-.navbar ul li a {
-	color: #333;
-	text-decoration: none;
-	font-size: 1.8rem; /* Further increase the font size */
-	transition: 0.3s;
-}
-
-.navbar ul li a:hover {
-	color: #444;
-}
+	padding: 0;
+	display: flex; /* Display items in a row */
+  }
+  
+  /* Navbar Items */
+  .navbar ul li {
+	margin-left: 20px; /* Add space between items */
+  }
+  
+  /* Navbar Links */
+  .navbar ul li a {
+	color: #fff; /* White text color for contrast */
+	text-decoration: none; /* Remove underline */
+	font-size: 1.2rem; /* Slightly larger font */
+	font-weight: bold;
+	padding: 10px 15px; /* Add padding around the links */
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	border-radius: 8px; /* Rounded corners for the link background */
+  }
+  
+  /* Hover Effect */
+  .navbar ul li a:hover {
+	background-color: #575757; /* Slightly lighter color on hover */
+	color: #f1f1f1; /* Light gray text color on hover */
+  }
+  
+  /* Active Link (Home) */
+  .navbar ul li a#home {
+	color: #ff9800; /* Orange color for active link */
+  }
+  
+  /* Navbar Brand Name */
+  .navbar ul li:first-child a {
+	font-size: 1.5rem; /* Larger font size for brand name */
+	font-weight: bold; /* Emphasize the brand name */
+	color: #ff9800; /* Same orange color for the brand */
+	text-transform: uppercase; /* Uppercase for style */
+  }
+  
+  
