@@ -8,9 +8,9 @@
 
 /* Card Styles */
 .card {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px purple;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -21,12 +21,17 @@
   width: 100%;
   height: auto;
   border-bottom: 1px solid #ddd;
+  opacity: 0.6;
+}
+
+.card img:hover {
+  opacity: 4; /* Dim the image by reducing its opacity */
 }
 
 .card-content h2 {
   margin: 15px 0;
   font-size: 1.5rem;
-  color: #333;
+  color: white;
 }
 
 /* Make the anchor tag covering the entire card */
@@ -38,10 +43,12 @@
 
 .card-link:hover .card {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px violet;
+
 }
 
 /* Button hover effect */
 .card:hover {
-  background-color: #f8f8f8;
+  background-color: purple;
+  font-family: 'Lobster', cursive;
 }
