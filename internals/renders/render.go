@@ -12,17 +12,24 @@ import (
 // functions is a map of template functions
 var functions = template.FuncMap{}
 
+var temps = make(map[string]*template.Template)
+
 // RenderTemplate is a helper function to render HTML templates
 func RenderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
-	t, _ := getTemplateCache()
-	ts, ok := t[tmpl]
-	if !ok {
-		renderServerErrorTemplate(w, tmpl+" is missing, contact the Network Admin.")
-		return
+	te, good := temps[tmpl]
+	if !good {
+		t, _ := getTemplateCache()
+		ts, ok := t[tmpl]
+		if !ok {
+			renderServerErrorTemplate(w, tmpl+" is missing, contact the Network Admin.")
+			return
+		}
+		te = ts
 	}
+	
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	err := ts.Execute(w, data)
+	err := te.Execute(w, data)
 	if err != nil {
 		return
 	}
@@ -61,7 +68,9 @@ func getTemplateCache() (map[string]*template.Template, error) {
 		}
 
 		myCache[name] = ts
+		
 	}
+	temps = myCache
 	return myCache, nil
 }
 
