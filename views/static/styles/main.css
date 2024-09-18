@@ -16,24 +16,3 @@ body {
     height: 100vh;
 }
 
-h1, h2 {
-    color: #333333;
-}
-
-h1 {
-    padding: 20px;
-    margin-top: 60px;
-}
-
-/* Button Styles */
-.btn {
-    background-color: #c93f16;
-    text-decoration: none;
-    color: white;
-}
-
-.btn:hover {
-    background-color: #5b7e5c;
-    color: blanchedalmond;
-    text-decoration: none;
-}
