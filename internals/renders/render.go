@@ -26,7 +26,6 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 		}
 		te = ts
 	}
-	
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	err := te.Execute(w, data)
@@ -68,7 +67,7 @@ func getTemplateCache() (map[string]*template.Template, error) {
 		}
 
 		myCache[name] = ts
-		
+
 	}
 	temps = myCache
 	return myCache, nil

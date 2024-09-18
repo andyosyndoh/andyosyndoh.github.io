@@ -64,14 +64,14 @@ func GetArtists() ([]Artists, error) {
 }
 
 func Getsingleartist(ID int) (Artists, error) {
-    var art Artists  // art will store the data of all artists in the Index slice
+	var art Artists // art will store the data of all artists in the Index slice
 	Idstr := strconv.Itoa(ID)
-    err := unmarshalData("/artists/"+Idstr, &art)  // Load the data into the Artist struct
-    if err != nil {
-        return Artists{}, err
-    }
+	err := unmarshalData("/artists/"+Idstr, &art) // Load the data into the Artist struct
+	if err != nil {
+		return Artists{}, err
+	}
 
-    return art, nil
+	return art, nil
 }
 
 func GetLocations(ID int) (Location, error) {
