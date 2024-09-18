@@ -8,6 +8,7 @@
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 	position: sticky;
 	top: 0;
+	font-family: 'Lobster', cursive;
 	z-index: 100; /* Ensures the navbar stays on top of content */
   }
   
