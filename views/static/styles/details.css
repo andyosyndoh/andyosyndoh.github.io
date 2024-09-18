@@ -59,7 +59,7 @@ body {
 .artist-details-card li {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: white; /* Ensure list items are visible */
+  /* color: white; Ensure list items are visible */
 }
 
 /* Card Container Styles */
