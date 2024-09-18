@@ -1,10 +1,9 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  /* background-color: #5757f8; */
   margin: 0;
   padding: 0;
-  color: #333; /* Set default text color to dark gray */
+  color: white /* Set default text color to dark gray */
 }
 
 /* Container Styling */
@@ -16,13 +15,13 @@ body {
 
 /* Card Styles */
 .card {
-  background-color: #afeeee;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 20px;
   padding: 15px;
-  color: #333; /* Text color inside cards */
+  color: white; /* Text color inside cards */
 }
 
 /* Artist Details Card */
@@ -48,7 +47,7 @@ body {
 .artist-details-card h2 {
   font-size: 1.8rem;
   margin-top: 0;
-  color: #000; /* Set heading color to black */
+  color: white; /* Set heading color to black */
 }
 
 .artist-details-card ul {
@@ -60,7 +59,7 @@ body {
 .artist-details-card li {
   margin-bottom: 10px;
   font-size: 1.2rem;
-  color: #333; /* Ensure list items are visible */
+  color: white; /* Ensure list items are visible */
 }
 
 /* Card Container Styles */
@@ -74,17 +73,17 @@ body {
 .locations-card, .dates-card, .relations-card {
   flex: 1;
   min-width: 250px;
-  background-color: #afeeee;
+  background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px white;
   padding: 15px;
-  color: #333; /* Text color inside cards */
+  color: white; /* Text color inside cards */
 }
 
 .locations-card h3, .dates-card h3, .relations-card h3 {
   margin-top: 0;
   font-size: 1.3rem;
-  color: #000; /* Heading color */
+  color: white; /* Heading color */
 }
 
 ul {
@@ -94,7 +93,7 @@ ul {
 
 li {
   margin-bottom: 10px;
-  color: #333; /* Ensure list items are visible */
+  color: white; /* Ensure list items are visible */
 }
 
 /* Responsive Design */
