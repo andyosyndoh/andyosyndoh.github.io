@@ -41,7 +41,27 @@ func TestGetLocations(t *testing.T) {
 		want    Location
 		wantErr bool
 	}{
-		{name: "Queen", args: args{ID: 1}, want: Location{ID: 1, Locations: []string{"north_carolina-usa", "georgia-usa", "los_angeles-usa", "saitama-japan", "osaka-japan", "nagoya-japan", "penrose-new_zealand", "dunedin-new_zealand"}, Dates: "https://groupietrackers.herokuapp.com/api/dates/1"}, wantErr: false},
+		{
+			name: "Queen",
+			args: args{
+				ID: 1,
+			},
+			want: Location{
+				ID: 1,
+				Locations: []string{
+					"north_carolina-usa",
+					"georgia-usa",
+					"los_angeles-usa",
+					"saitama-japan",
+					"osaka-japan",
+					"nagoya-japan",
+					"penrose-new_zealand",
+					"dunedin-new_zealand",
+				},
+				Dates: "https://groupietrackers.herokuapp.com/api/dates/1",
+			},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -67,7 +87,24 @@ func TestGetDates(t *testing.T) {
 		want    Date
 		wantErr bool
 	}{
-		{name: "Queen", args: args{ID: 1}, want: Date{ID: 1, Dates: []string{"*23-08-2019", "*22-08-2019", "*20-08-2019", "*26-01-2020", "*28-01-2020", "*30-01-2019", "*07-02-2020", "*10-02-2020"}}, wantErr: false},
+		{
+			name: "Queen",
+			args: args{ID: 1},
+			want: Date{
+				ID: 1,
+				Dates: []string{
+					"*23-08-2019",
+					"*22-08-2019",
+					"*20-08-2019",
+					"*26-01-2020",
+					"*28-01-2020",
+					"*30-01-2019",
+					"*07-02-2020",
+					"*10-02-2020",
+				},
+			},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -93,7 +130,24 @@ func TestGetRelation(t *testing.T) {
 		want    ArtistDetails
 		wantErr bool
 	}{
-		// TODO: Add test cases.
+		{
+			name: "Queen",
+			args: args{ID: 1},
+			want: ArtistDetails{
+				ID: 1,
+				DatesLocations: map[string][]string{
+					"dunedin-new_zealand": {"10-02-2020"},
+					"georgia-usa":         {"22-08-2019"},
+					"los_angeles-usa":     {"20-08-2019"},
+					"nagoya-japan":        {"30-01-2019"},
+					"north_carolina-usa":  {"23-08-2019"},
+					"osaka-japan":         {"28-01-2020"},
+					"penrose-new_zealand": {"07-02-2020"},
+					"saitama-japan":       {"26-01-2020"},
+				},
+			},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -108,3 +162,6 @@ func TestGetRelation(t *testing.T) {
 		})
 	}
 }
+
+// {1 map[dunedin-new_zealand:[10-02-2020] georgia-usa:[22-08-2019] los_angeles-usa:[20-08-2019] nagoya-japan:[30-01-2019] north_carolina-usa:[23-08-2019] osaka-japan:[28-01-2020] penrose-new_zealand:[07-02-2020] saitama-japan:[26-01-2020]]}
+// {0 map[dunedin-new_zealand:[10-02-2020] georgia-usa:[22-08-2019] los_angeles-usa:[20-08-2019] nagoya-japan:[30-01-2019] north_carolina-usa:[23-08-2019] osaka-japan:[28-01-2020] penrose-new_zealand:[07-02-2020] saitama-japan:[26-01-2020]]}
