@@ -82,7 +82,7 @@ body {
 .locations-card h3, .dates-card h3, .relations-card h3 {
   margin-top: 0;
   font-size: 1.3rem;
-  color: rgb(236, 87, 236); /* Heading color */
+  color: aliceblue; /* Heading color */
 }
 
 ul {
