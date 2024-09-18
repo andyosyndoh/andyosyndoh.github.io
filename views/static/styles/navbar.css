@@ -37,20 +37,20 @@
   
   /* Hover Effect */
   .navbar ul li a:hover {
-	background-color: #575757; /* Slightly lighter color on hover */
+	background-color: violet; /* Slightly lighter color on hover */
 	color: #f1f1f1; /* Light gray text color on hover */
   }
   
   /* Active Link (Home) */
   .navbar ul li a#home {
-	color: #ff9800; /* Orange color for active link */
+	color: purple; /* Orange color for active link */
   }
   
   /* Navbar Brand Name */
   .navbar ul li:first-child a {
 	font-size: 1.5rem; /* Larger font size for brand name */
 	font-weight: bold; /* Emphasize the brand name */
-	color: #ff9800; /* Same orange color for the brand */
+	color: purple; /* Same orange color for the brand */
 	text-transform: uppercase; /* Uppercase for style */
   }
   
