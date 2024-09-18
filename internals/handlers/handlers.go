@@ -21,7 +21,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		artists, err := utils.GetArtists()
 		if err != nil {
-			http.Error(w, "Failed to retrieve artists data", http.StatusInternalServerError)
+			ServerErrorHandler(w, r)
 			log.Printf("Error retrieving artists: %v", err)
 			return
 		}
@@ -56,7 +56,8 @@ func Location(w http.ResponseWriter, r *http.Request) {
 		idValue := queryParams.Get("id")
 		ID, err := strconv.Atoi(idValue)
 		if err != nil {
-			http.Error(w, "Invalid ID", http.StatusBadRequest)
+			BadRequestHandler(w, r)
+			// http.Error(w, "Invalid ID", http.StatusBadRequest)
 			log.Printf("Error converting id param to int value: %v", err)
 			return
 		}
@@ -81,7 +82,8 @@ func Location(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if err != nil {
-			http.Error(w, "Failed to retrieve location data", http.StatusInternalServerError)
+			ServerErrorHandler(w, r)
+			// http.Error(w, "Failed to retrieve location data", http.StatusInternalServerError)
 			log.Printf("Error retrieving location data: %v", err)
 			return
 		}
