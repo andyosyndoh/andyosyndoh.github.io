@@ -25,12 +25,12 @@ svg {
 	width: 80px;
 	height: 80px;
 	object-fit: cover;
-	box-shadow: 2px 8px 15px rgba(0, 0, 0, 1);
+	box-shadow: 2px 8px 15px white;
 }
 
 .author-name {
 	margin-top: 10px;
-	color: 333;
+	color: white;
 	font-size: 1.2em;
 }
 
@@ -39,12 +39,13 @@ svg {
 	padding: 1% 20%;
 	margin: 0 auto;
 	text-align: center;
+	text-emphasis-color: white;
 	color: 333;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-top: 1px solid #444;
-	border-bottom: 1px solid #444;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
 
 .my-footer svg {
