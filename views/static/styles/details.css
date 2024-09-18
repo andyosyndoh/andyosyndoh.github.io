@@ -3,7 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: white /* Set default text color to white */
+  color: white
+    /* Set default text color to white */
 }
 
 /* Container Styling */
@@ -46,7 +47,8 @@ body {
 .artist-details-card h2 {
   font-size: 1.8rem;
   margin-top: 0;
-  color: rgb(52, 243, 243); /* Set heading color*/
+  color: rgb(52, 243, 243);
+  /* Set heading color*/
 }
 
 
@@ -70,7 +72,9 @@ body {
 }
 
 /* Specific Card Styles */
-.locations-card, .dates-card, .relations-card {
+.locations-card,
+.dates-card,
+.relations-card {
   flex: 1;
   min-width: 250px;
   background-color: transparent;
@@ -79,10 +83,13 @@ body {
   padding: 15px;
 }
 
-.locations-card h3, .dates-card h3, .relations-card h3 {
+.locations-card h3,
+.dates-card h3,
+.relations-card h3 {
   margin-top: 0;
   font-size: 1.3rem;
-  color: aliceblue; /* Heading color */
+  color: aliceblue;
+  /* Heading color */
 }
 
 ul {
@@ -93,8 +100,33 @@ ul {
 
 li {
   margin-bottom: 10px;
-  color: white; /* Ensure list items are visible */
+  color: white;
+  /* Ensure list items are visible */
 }
+
+.back-button {
+  background-color: purple; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button inline */
+  font-size: 16px; /* Set font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.back-button a {
+  color: white; /* White link text */
+  text-decoration: none; /* Remove underline */
+}
+
+.back-button:hover {
+  background-color: violet; /* Darker green on hover */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
