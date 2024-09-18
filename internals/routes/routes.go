@@ -41,6 +41,6 @@ func RegisterRoutes(mux *http.ServeMux) {
 	})
 
 	mux.HandleFunc("/details", func(w http.ResponseWriter, r *http.Request) {
-		handlers.Location(w, r)
+		handlers.Details(w, r)
 	})
 }

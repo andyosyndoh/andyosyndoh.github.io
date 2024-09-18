@@ -49,8 +49,8 @@ func ServerErrorHandler(w http.ResponseWriter, r *http.Request) {
 	renders.RenderTemplate(w, "serverError.page.html", nil)
 }
 
-// AboutHandler handles the about page route '/about'
-func Location(w http.ResponseWriter, r *http.Request) {
+// Details handles the about page route '/details'
+func Details(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
 		queryParams := r.URL.Query()
 		idValue := queryParams.Get("id")
