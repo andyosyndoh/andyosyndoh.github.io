@@ -1,13 +1,13 @@
 .notfound {
-	color: red;
+	color: rgb(52, 243, 243);
 
 	text-decoration: none;
 }
 .notfound:hover {
-	color: rgb(232, 185, 115);
+	color: rgb(247, 151, 151);
 	text-decoration: none;
 }
  .btn {
-	color: white;
+	color: rgb(238, 146, 215);
 	background-color: rgb(97, 221, 97);
  }
