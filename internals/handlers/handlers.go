@@ -69,10 +69,10 @@ func Details(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		location, _ := utils.GetLocations(ID)
+		location, err := utils.GetLocations(ID)
 		artists, _ := utils.Getsingleartist(ID)
 		dates, _ := utils.GetDates(ID)
-		relations, err := utils.GetRelation(ID)
+		relations, _ := utils.GetRelation(ID)
 
 		artistDetails := ArtistDetails{
 			Art:       artists, // Wrap single artist in a slice
