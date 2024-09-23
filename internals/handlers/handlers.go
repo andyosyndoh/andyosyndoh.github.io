@@ -87,7 +87,6 @@ func Details(w http.ResponseWriter, r *http.Request) {
 			Relations: relations,
 		}
 
-
 		renders.RenderTemplate(w, "details.page.html", artistDetails)
 	} else {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
