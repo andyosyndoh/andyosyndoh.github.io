@@ -2,11 +2,11 @@
 
 ### Introduction
 
-* Groupie-tracker is a go project which consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
+* Groupie-tracker is a go project which consists on receiving a given [API]("https://groupietrackers.herokuapp.com/api") and manipulate the data contained in it, in order to create a site, displaying the information.
 
 ### Description
 
-* The project consicts on building a user friendly website where the user can display the bands info through several data visualizations. (such as : blocks, cards, tables, list, pages, graphics.)
+* The project consicts on building a user friendly website where the user can display the bands info through several data visualizations. (such as :cards)
 
 * This project also focuses on the creation of events/actions and on their visualization.
 
@@ -46,10 +46,10 @@
 ```bash
 go run .
 ```
-5. go to the web port given, probably @http://localhost:8080
+5. go to the web port given, @http://localhost:8080
 
 ## Authors
 
-[aosindo] ()
+[aosindo](https://github.com/andyosyndoh)
 
 [vandisi](https://github.com/Vinolia-E)
