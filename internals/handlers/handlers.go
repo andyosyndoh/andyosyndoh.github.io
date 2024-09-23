@@ -73,6 +73,12 @@ func Details(w http.ResponseWriter, r *http.Request) {
 		artists, _ := utils.Getsingleartist(ID)
 		dates, _ := utils.GetDates(ID)
 		relations, _ := utils.GetRelation(ID)
+		if err != nil {
+			ServerErrorHandler(w, r)
+			// http.Error(w, "Failed to retrieve location data", http.StatusInternalServerError)
+			log.Printf("Error retrieving location data: %v", err)
+			return
+		}
 
 		artistDetails := ArtistDetails{
 			Art:       artists, // Wrap single artist in a slice
@@ -81,12 +87,6 @@ func Details(w http.ResponseWriter, r *http.Request) {
 			Relations: relations,
 		}
 
-		if err != nil {
-			ServerErrorHandler(w, r)
-			// http.Error(w, "Failed to retrieve location data", http.StatusInternalServerError)
-			log.Printf("Error retrieving location data: %v", err)
-			return
-		}
 
 		renders.RenderTemplate(w, "details.page.html", artistDetails)
 	} else {
