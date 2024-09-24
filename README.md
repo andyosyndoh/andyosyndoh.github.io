@@ -2,7 +2,7 @@
 
 ### Introduction
 
-* Groupie-tracker is a go project which consists on receiving a given [API]("https://groupietrackers.herokuapp.com/api") and manipulate the data contained in it, in order to create a site, displaying the information.
+* Groupie-tracker is a go project which consists on receiving a given [API](https://groupietrackers.herokuapp.com/api) and manipulate the data contained in it, in order to create a site, displaying the information.
 
 ### Description
 
