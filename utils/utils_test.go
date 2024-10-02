@@ -162,6 +162,3 @@ func TestGetRelation(t *testing.T) {
 		})
 	}
 }
-
-// {1 map[dunedin-new_zealand:[10-02-2020] georgia-usa:[22-08-2019] los_angeles-usa:[20-08-2019] nagoya-japan:[30-01-2019] north_carolina-usa:[23-08-2019] osaka-japan:[28-01-2020] penrose-new_zealand:[07-02-2020] saitama-japan:[26-01-2020]]}
-// {0 map[dunedin-new_zealand:[10-02-2020] georgia-usa:[22-08-2019] los_angeles-usa:[20-08-2019] nagoya-japan:[30-01-2019] north_carolina-usa:[23-08-2019] osaka-japan:[28-01-2020] penrose-new_zealand:[07-02-2020] saitama-japan:[26-01-2020]]}
