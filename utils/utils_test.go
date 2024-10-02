@@ -15,7 +15,32 @@ func TestGetsingleartist(t *testing.T) {
 		want    Artists
 		wantErr bool
 	}{
-		{name: "Queen", args: args{ID: 1}, want: Artists{ID: 1, ImageURL: "https://groupietrackers.herokuapp.com/api/images/queen.jpeg", Name: "Queen", Members: []string{"Freddie Mercury", "Brian May", "John Daecon", "Roger Meddows-Taylor", "Mike Grose", "Barry Mitchell", "Doug Fogie"}, CreationDate: 1970, FirstAlbum: "14-12-1973", LocationsURL: "https://groupietrackers.herokuapp.com/api/locations/1", ConcertDatesURL: "https://groupietrackers.herokuapp.com/api/dates/1", RelationsURL: "https://groupietrackers.herokuapp.com/api/relation/1"}, wantErr: false},
+		{
+			name: "Queen",
+			args: args{
+				ID: 1,
+			},
+			want: Artists{
+				ID:       1,
+				ImageURL: "https://groupietrackers.herokuapp.com/api/images/queen.jpeg",
+				Name:     "Queen",
+				Members: []string{
+					"Freddie Mercury",
+					"Brian May",
+					"John Daecon",
+					"Roger Meddows-Taylor",
+					"Mike Grose",
+					"Barry Mitchell",
+					"Doug Fogie",
+				},
+				CreationDate:    1970,
+				FirstAlbum:      "14-12-1973",
+				LocationsURL:    "https://groupietrackers.herokuapp.com/api/locations/1",
+				ConcertDatesURL: "https://groupietrackers.herokuapp.com/api/dates/1",
+				RelationsURL:    "https://groupietrackers.herokuapp.com/api/relation/1",
+			},
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
